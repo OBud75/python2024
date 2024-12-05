@@ -1,0 +1,22 @@
+Documentations :
+    https://docs.python.org/3/c-api/
+    https://www.mypy-lang.org/
+    https://pandas.pydata.org/docs/
+    https://numpy.org/doc/stable/
+
+    https://scikit-learn.org/stable/
+    https://pytorch.org/docs/stable/index.html
+    https://www.tensorflow.org/api_docs
+
+
+Neural networks :
+    https://youtu.be/yuDBSbng_8o?si=bDOH-0gmmJi-Cs0r
+    https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+
+
+Algorithms / logic exercices :
+    https://adventofcode.com/
+
+
+Datasets :
+    https://www.kaggle.com/datasets
