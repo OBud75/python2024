@@ -63,7 +63,31 @@ class Board:
         if not self.empty_cells:
             return 0
 
+        if is_maximizing:
+            best_score = -math.inf
+            for (y, x) in self.empty_cells:
+                self.position[y][x] = "O"
+                score = self.minimax(is_maximizing=False)
+                self.position[y][x] = " "
+                best_score = max(score, best_score)
+            return best_score
+
+        best_score = math.inf
+        for (y, x) in self.empty_cells:
+            self.position[y][x] = "X"
+            score = self.minimax(is_maximizing=True)
+            self.position[y][x] = " "
+            best_score = min(score, best_score)
+        return best_score
+
     def best_move(self) -> tuple[int, int]:
         best_score = -math.inf
         move = None
+        for y, x in self.empty_cells:
+            self.position[y][x] = "O"
+            score = self.minimax(False)
+            self.position[y][x] = " "
+            if score > best_score:
+                best_score = score
+                move = (y, x)
         return move
