@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from dataclasses import dataclass, FrozenInstanceError
 
 
 def animal_init(self):
@@ -66,3 +67,51 @@ say_hello("Thomas")
 
 do_something = Function(func=lambda k, j: print(f"Called with {k, j}"))
 do_something(1, 2)
+
+
+
+class StaticPerson:
+    # Tuples are immutable
+    # Dynamic classes have a __dict__ instead
+    __slots__ = ("age", "name")
+
+    def __init__(self, age, name):
+        self.age = age
+        self.name = name
+
+
+p1 = StaticPerson(age=33, name="Thomas")
+try:
+    p1.favorite_color = "blue"
+except AttributeError as e:
+    print(e)
+
+
+
+@dataclass
+class Person:
+    """Dataclasses abstract the __init__ method."""
+    name: str
+
+p1 = Person(name="Thomas")
+p1.age = 18
+
+p2 = Person(name="Titi")
+print(p1.name, p2.name)
+try:
+    print(Person.name)
+except AttributeError as e:
+    print(e)
+
+
+@dataclass(frozen=True)
+class FrozenPerson:
+    """Frozen : __slots__ instead of __dict__"""
+    name: str
+
+
+p1 = FrozenPerson(name="Thomas")
+try:
+    p1.age = 18
+except FrozenInstanceError as e:
+    print(e)
