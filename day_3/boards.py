@@ -55,7 +55,7 @@ class Board:
         if not self.empty_cells:
             quit(code="Draw")
 
-    def minimax(self, is_maximizing) -> int:
+    def get_score(self, is_maximizing) -> int:
         if self.is_won("O"):
             return 1
         if self.is_won("X"):
@@ -67,7 +67,7 @@ class Board:
             best_score = -math.inf
             for (y, x) in self.empty_cells:
                 self.position[y][x] = "O"
-                score = self.minimax(is_maximizing=False)
+                score = self.get_score(is_maximizing=False)
                 self.position[y][x] = " "
                 best_score = max(score, best_score)
             return best_score
@@ -75,7 +75,7 @@ class Board:
         best_score = math.inf
         for (y, x) in self.empty_cells:
             self.position[y][x] = "X"
-            score = self.minimax(is_maximizing=True)
+            score = self.get_score(is_maximizing=True)
             self.position[y][x] = " "
             best_score = min(score, best_score)
         return best_score
@@ -85,7 +85,7 @@ class Board:
         move = None
         for y, x in self.empty_cells:
             self.position[y][x] = "O"
-            score = self.minimax(False)
+            score = self.get_score(is_maximizing=False)
             self.position[y][x] = " "
             if score > best_score:
                 best_score = score

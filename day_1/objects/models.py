@@ -58,8 +58,8 @@ class Person:
         return f"{self.name} called with args {args}."
 
     def __add__(self, value):
-        # TODO P1 + P3 -> P4
-        # P6 + P10 -> P16
+        name = filter(lambda char: char.isnumeric(), self.name)
+
         name = "toto"
         birth_year = 2024
         return self.__class__(name, birth_year)

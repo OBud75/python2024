@@ -1,4 +1,3 @@
-from abc import ABC, abstractmethod
 from itertools import chain
 
 
@@ -7,65 +6,6 @@ def next_iter():
     l = iter(li)
     for _ in range(len(li)):
         print(next(l))
-
-
-def animal_init(self):
-    print("init animal")
-
-@abstractmethod
-def talk(self):
-    raise NotImplemented
-
-Animal = type(
-    "Animal",
-    (ABC,),
-    {
-        "__init__": animal_init,
-        "talk": talk,
-        "objects": set()
-    }
-)
-
-class Dog(Animal):
-    def talk(self):
-        print("Waf")
-
-class Cat(Animal):
-    def talk(self):
-        print("Miaou")
-
-
-class Cursor:
-    _instance = None
-
-    @classmethod
-    def __new__(cls, *args, **kwargs):
-        if Cursor._instance:
-            return Cursor._instance
-
-        Cursor._instance = super().__new__(cls)
-        return Cursor._instance
-
-
-class Human:
-    objects = set()
-
-    @classmethod
-    def __new__(cls, *args, **kwargs):
-        for obj in cls.objects:
-            if obj.name == args[1]:
-                return obj
-
-        instance = super().__new__(cls)
-        cls.objects.add(instance)
-        return instance
-
-    def __init__(self, name):
-        self.name = name
-
-
-class Men(Human): ...
-class Women(Human): ...
 
 
 class Category:

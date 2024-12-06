@@ -1,22 +1,69 @@
 Documentations :
     https://docs.python.org/3/c-api/
     https://www.mypy-lang.org/
+
     https://pandas.pydata.org/docs/
     https://numpy.org/doc/stable/
-
     https://scikit-learn.org/stable/
     https://pytorch.org/docs/stable/index.html
     https://www.tensorflow.org/api_docs
+    https://scipy.org/
 
 
 Neural networks :
     https://youtu.be/yuDBSbng_8o?si=bDOH-0gmmJi-Cs0r
     https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+    https://youtu.be/S_kBkezX1ME?si=1aBseVdssSPQOrG-
+
+    Harvard (Introductions / General understanding)
+        https://youtu.be/QAZc9xsQNjQ?si=QFXDc4Pj5eTdubD4
+        https://youtu.be/6X58aP7yXC4?si=-oaE4kloJX2tXmLq
+
+    Stanford (Complete courses)
+        Introduction to Building LLMs
+            https://drive.google.com/file/d/1B46VFrqFAPAEj3kaCrBAtQqeh2_Ztawl/view
+        NLP with Deep Learning
+            https://youtu.be/rmVRLeJRkl4?si=RQEr4hjCRrylRWxu
 
 
-Algorithms / logic exercices :
+Datasets / logic exercices :
+    https://www.kaggle.com/datasets
     https://adventofcode.com/
 
 
-Datasets :
-    https://www.kaggle.com/datasets
+SQL / ORM / Schemas :
+    https://docs.python.org/3/library/sqlite3.html
+    https://www.sqlalchemy.org/
+    https://docs.pydantic.dev/latest/
+
+    https://use-the-index-luke.com/
+    https://docs.dataherald.com/introduction
+    https://fr.wikipedia.org/wiki/Elasticsearch
+
+
+Web Frameworks :
+    https://www.djangoproject.com/
+    https://www.django-rest-framework.org/
+    https://django-ninja.dev/
+    https://fastapi.tiangolo.com/
+    https://flask.palletsprojects.com/en/stable/
+
+
+Books :
+    https://www.oreilly.com/library/view/python-data-science/9781491912126/
+
+    Clean code & Clean architecture by Robert C. Martin (Mostly Java)
+    His blog : https://blog.cleancoder.com/ 
+
+
+Code logic:
+    https://python.doctor/
+    https://pythontutor.com/
+
+    https://www.youtube.com/@CodeAesthetic
+
+    https://fr.wikipedia.org/wiki/Alg%C3%A8bre_de_Boole_(logique)
+    https://fr.wikipedia.org/wiki/Lois_de_De_Morgan
+
+    https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce
+    https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra
