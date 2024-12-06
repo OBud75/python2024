@@ -8,12 +8,15 @@ Documentations :
     https://pytorch.org/docs/stable/index.html
     https://www.tensorflow.org/api_docs
     https://scipy.org/
+    https://www.nltk.org/
+    https://pypi.org/project/transformers/
 
 
 Neural networks :
     https://youtu.be/yuDBSbng_8o?si=bDOH-0gmmJi-Cs0r
     https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
     https://youtu.be/S_kBkezX1ME?si=1aBseVdssSPQOrG-
+    https://medium.com/@sumit.tripathi/learning-how-to-build-your-own-gpt-on-python-173258a0eb33
 
     Harvard (Introductions / General understanding)
         https://youtu.be/QAZc9xsQNjQ?si=QFXDc4Pj5eTdubD4
@@ -38,6 +41,8 @@ SQL / ORM / Schemas :
 
     https://use-the-index-luke.com/
     https://docs.dataherald.com/introduction
+
+    https://fr.wikipedia.org/wiki/Lucene
     https://fr.wikipedia.org/wiki/Elasticsearch
 
 

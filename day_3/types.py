@@ -51,3 +51,18 @@ try:
     p1 = Person()
 except ValueError as e:
     print(e)
+
+
+class Function:
+    def __init__(self, func):
+        self.func = func
+
+    def __call__(self, *args, **kwds):
+        return self.func(*args)
+
+
+say_hello = Function(func=lambda k: print(f"Hello {k}"))
+say_hello("Thomas")
+
+do_something = Function(func=lambda k, j: print(f"Called with {k, j}"))
+do_something(1, 2)
