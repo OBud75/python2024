@@ -35,11 +35,12 @@ Datasets / logic exercices :
 
 
 SQL / ORM / Schemas :
+    https://sqlpd.com/
+    https://use-the-index-luke.com/
+
     https://docs.python.org/3/library/sqlite3.html
     https://www.sqlalchemy.org/
     https://docs.pydantic.dev/latest/
-
-    https://use-the-index-luke.com/
     https://docs.dataherald.com/introduction
 
     https://fr.wikipedia.org/wiki/Lucene
