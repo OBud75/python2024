@@ -1,3 +1,12 @@
+class Parent:
+    def __init__(self):
+        self.__name = "parent"
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        self.__name = "child"
+
 from typing import Self
 
 class NotInClassException(Exception):
@@ -5,32 +14,32 @@ class NotInClassException(Exception):
 
 
 class Wizzard:
-    skill_count = 0
+    _skill_count = 0
     _students: set[Self] = set()
 
     def __init__(self, name):
         Wizzard._students.add(self)
-        self.name = name
-        self.is_in_class = True
+        self._name = name
+        self._is_in_class = True
 
     @classmethod
     def print_students_skill_count(cls):
         for student in cls._students:
-            print(student.name, student.skill_count)
+            print(student._name, student._skill_count)
 
     def gets_fired(self):
-        self.skill_count = self.skill_count
-        self.is_in_class = False
+        self._skill_count = self._skill_count
+        self._is_in_class = False
 
     def gets_back_to_class(self):
-        self.skill_count = Wizzard.skill_count
-        self.is_in_class = True
+        self._skill_count = Wizzard._skill_count
+        self._is_in_class = True
 
     def new_skill(self):
-        if self.is_in_class:
-            Wizzard.skill_count += 1
+        if self._is_in_class:
+            Wizzard._skill_count += 1
         else:
-            raise NotInClassException(f"{self.name} cannot learn new skill while not in class")
+            raise NotInClassException(f"{self._name} cannot learn new skill while not in class")
 
 
 hermione = Wizzard(name="Hermione")
@@ -53,3 +62,24 @@ except NotInClassException as e:
 
 londubat.gets_back_to_class()
 Wizzard.print_students_skill_count()
+
+
+
+# Mangling
+
+class Parent:
+    def __init__(self):
+        self.__name = "parent"
+
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        self.__name = "child"
+
+
+c = Child()
+print(c._Parent__name)
+print(c._Child__name)
+
+
