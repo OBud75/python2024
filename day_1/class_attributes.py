@@ -1,12 +1,3 @@
-class Parent:
-    def __init__(self):
-        self.__name = "parent"
-
-class Child(Parent):
-    def __init__(self):
-        super().__init__()
-        self.__name = "child"
-
 from typing import Self
 
 class NotInClassException(Exception):
