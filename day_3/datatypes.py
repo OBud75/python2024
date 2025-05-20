@@ -104,9 +104,12 @@ except AttributeError as e:
     print(e)
 
 
-@dataclass(frozen=True)
+@dataclass(frozen=True, slots=True)
 class FrozenPerson:
-    """Frozen : __slots__ instead of __dict__"""
+    """
+    Frozen : Immutability (abstract the definition of __setattr__ ecc)
+    Slots : abstract the __slots__ = syntax
+    """
     name: str
 
 
@@ -115,3 +118,10 @@ try:
     p1.age = 18
 except FrozenInstanceError as e:
     print(e)
+
+try:
+    p1.name = "Albert"
+except FrozenInstanceError as e:
+    print(e)
+
+# https://docs.python.org/3/library/dataclasses.html
